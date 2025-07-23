@@ -1,0 +1,14 @@
+<div class="blogs">
+  <div class="container">
+    <h1>My Blogs</h1>
+    <% if(blogs.length>0){%> <% blogs.forEach(blog => {%>
+
+    <div class="blog">
+      <a href="/blogs/<%=blog._id  %>">
+        <h2><%= blog.title %></h2>
+        <p><%= blog.snippet %></p>
+      </a>
+    </div>
+    <%}) %> <% } %>
+  </div>
+</div>

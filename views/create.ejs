@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <div
+      class="container"
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+      "
+    >
+      <form
+        action="/blogs"
+        method="post"
+        style="
+          display: flex;
+          align-items: end;
+          justify-content: space-between;
+          flex-direction: column;
+        "
+      >
+        <label>
+          title:
+          <input
+            type="text"
+            placeholder="title of blog"
+            style="
+              width: 400px;
+              height: 40px;
+              display: flex;
+              align-items: center;
+            "
+            name="title"
+          />
+        </label>
+        <label>
+          snippet:
+          <input
+            type="text"
+            placeholder="snippet"
+            name="snippet"
+            style="
+              width: 400px;
+              height: 40px;
+              display: flex;
+              align-items: center;
+            "
+            title="snippet"
+          />
+        </label>
+        <label>
+          body:
+          <textarea
+            name="body"
+            style="
+              width: 400px;
+              height: 300px;
+              display: flex;
+              align-items: center;
+            "
+            name="body"
+          ></textarea>
+        </label>
+        <input
+          id="send"
+          type="submit"
+          value="Post Blog"
+          style="
+            background-color: rgb(6, 49, 35);
+            outline: none;
+            padding: 10px 15px;
+            border: none;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+          "
+        />
+      </form>
+    </div>
+    <script>
+      //   let btn = document.getElementById("send");
+      //   fetch("/blogs", { method: "POST" });
+    </script>
+  </body>
+</html>

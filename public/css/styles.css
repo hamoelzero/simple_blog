@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+@media (width >= 567px) {
+  .container {
+    width: 550px;
+  }
+}
+@media (width >= 768px) {
+  .container {
+    width: 760px;
+  }
+}
+@media (width >= 900px) {
+  .container {
+    width: 880px;
+  }
+}
+@media (width >= 1200px) {
+  .container {
+    width: 1180px;
+  }
+}
+@media (width >= 1400px) {
+  .container {
+    width: 1370px;
+  }
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  background-color: beige;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container .logo a {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+header nav ul li a {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  transition: color 0.5s;
+  &:hover {
+    color: rgb(173, 78, 14);
+  }
+}
+
+.blogs .container > h1 {
+  font-weight: 900;
+  font-size: 2rem;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.blogs .blog {
+  background-color: beige;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.5s;
+  margin: 0.5rem 0;
+  h2 {
+    transition: color 0.5s;
+  }
+  P {
+    padding: 0 1rem;
+  }
+  &:hover {
+    background-color: bisque;
+    h2 {
+      color: rgba(255, 0, 0, 0.63);
+    }
+  }
+}
+
+label {
+  font-weight: 400;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  > input,textarea {
+    padding: 5px 10px;
+    margin-inline-start: 0.5rem;
+    margin: 1rem 0;
+  }
+}
