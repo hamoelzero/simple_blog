@@ -7,7 +7,8 @@ const app_port = 3000;
 const app = express();
 
 //conect dataBase
-const dbUrl = "mongodb://localhost:27017/myDatabase";
+const dbUrl =
+  "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.4.0";
 mongoose.connect(dbUrl).then((_) => {
   app.listen(app_port);
   console.log("database connected successfully");
@@ -29,7 +30,7 @@ app.get("/", async (req, res) => {
 });
 app.use("/blogs", blogRoutes);
 //
-// 
+//
 //
 //about
 app.get("/about", (req, res) => {
