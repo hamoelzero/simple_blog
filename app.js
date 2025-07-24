@@ -8,7 +8,7 @@ const app = express();
 
 //conect dataBase
 const dbUrl =
-  "mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.4.0";
+  "mongodb+srv://mohammadomar:Mo0161720090@cluster0.edbk3zb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 mongoose.connect(dbUrl).then((_) => {
   app.listen(app_port);
   console.log("database connected successfully");
